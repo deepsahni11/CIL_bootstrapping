@@ -16,7 +16,7 @@ from scipy.sparse import coo_matrix
 from sklearn.utils import resample
 import numpy as np
 import pandas as pd
-
+import random
 #data_metrics_1_7_features_test = np.load("data_metrics_1_7_features_test.npy" , allow_pickle = True)
 #data_metrics_1_7_features_train = np.load("data_metrics_1_7_features_train.npy" , allow_pickle = True)
 #data_metrics_1_7_features = data_metrics_1_7_features_test
@@ -64,7 +64,7 @@ def split_random(matrix, percent_train, percent_test, seed = 0):
     
     """
 
-    seed = 0
+    np.random.seed = 0
     percent_validation = 100 - percent_train - percent_test
 
     if percent_validation < 0:
